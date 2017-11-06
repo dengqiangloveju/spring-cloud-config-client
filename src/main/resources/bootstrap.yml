@@ -1,0 +1,23 @@
+spring: 
+  application:
+    name: config-client
+    
+  #cloud: 
+    #config: 
+      #uri: http://lamic:lamic@localhost:8080 
+      #profile: dev 
+      #label: master
+      
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: config-server
+      username: lamic
+      password: lamic
+
+eureka: 
+  client: 
+    serviceUrl: 
+      defaultZone: 
+        http://drunk:123456@localhost:8761/eureka/
